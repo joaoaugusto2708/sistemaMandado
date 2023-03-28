@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--BootStrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./consulta.css" />
+    <title>Consulta</title>
+  </head>
+  <body>
+      <header class="header">
+        <span class="logo">INSS</span>
+        <div class="buttons">
+          <button class="buttonHeader" id="cadastro">
+            <a href="../cadastro/index.html">Cadastro</a>
+          </button>
+          <button class="buttonHeader" id="consulta">
+            <a href="../consulta/consulta.html">Consulta</a>
+          </button>
+        </div>
+      </header>
+      <div class="titulo">
+        <p class="editTitulo">Consulta</p>
+      </div>
+        <div class="form m-2">
+          <form id="form2">
+            <label for="numMandado" class="form-label">Busca</label>
+            <input type="text" name="numMandado" id="buscar" class="form-control"/>
+            <button type="submit" class="btn btn-primary m-2" id="filtrar" >Filtrar</button>
+          </form>
+        </div>
+        <div class="m-2">
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th scope="col">Tarefa GET</th>
+              <th scope="col">Numero do Mandado</th>
+              <th scope="col">CPF</th>
+              <th scope="col">Servidor Responsável</th>
+              <th scope="col">Assunto</th>
+              <th scope="col">Multa</th>
+              <th scope="col">Prazo</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+            <tbody id="table">
+
+            </tbody>
+          </table>
+        </div>
+
+    <!--momentJS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js" integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--FireBase-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <!--Script BootStrap-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!--Script Pagina-->
+    <script src="../consulta/consulta.js" type="module" defer></script>
+  </body>
+</html>

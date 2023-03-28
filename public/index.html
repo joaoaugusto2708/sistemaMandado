@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logar</title>
+    <link rel="stylesheet" href="/public/css/login.css" />
+    
+  </head>
+  <body>
+    <div class="titulo">
+      <h1>Tela de Login</h1>
+    </div>
+    <section>
+      <form id="form">
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" required />
+        <span id="email-error"></span>
+        <label for="password">Senha:</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          maxlength="16"
+          minlength="8"
+          required
+          id="senha"
+        />
+        <span id="password-error"></span>
+        <button type="submit" id="logar">Logar</button>
+        <button type="button">
+          <a href="/public/html/telaCadUser.html">Cadastrar</a>
+        </button>
+      </form>
+    </section>
+        <!--firebase-->
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+        <!-- Firebase App is always required and must be first -->
+        <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+        <!-- Add additional services that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/ui/3.5.1/firebase-ui-auth__pt.js"></script>
+        
+        <script src="/public/js/login.js" type="module"></script>
+  </body>
+</html>

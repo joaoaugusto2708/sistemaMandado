@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Mandado</title>
+    <!--BootStrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <!--CSS-->
+    <link rel="stylesheet" href="./cadastro.css">
+    <!--Firebase-->
+    
+</head>
+
+<body>
+    <header class="header">
+        <span class="logo">INSS</span>
+        <div class="buttons">
+            <button class="buttonHeader" id="cadastro"><a href="/dist/cadastro/index.html">Cadastro</a></button>
+            <button class="buttonHeader" id="consulta"><a href="/dist/consulta/consulta.html">Consulta</a></button>
+        </div>
+    </header>
+    <div class="h1 ps-2 m-4">
+        <p class="editTitulo">Cadastro de Mandado</p>
+    </div>
+    <div class="container-sm">
+        <div class="form">
+            <form action=" " method="post" id="formMandado">
+                <div class="main-content">
+                    <div class="container-sm item item1">
+                        <label for="registro1" class="bloco1">Numero P.J:
+                            <input type="text" name="numero" id="registro1" class="form-control" required minlength="20"
+                                maxlength="25">
+                        </label>
+                        <label for="registro3" class="bloco1">Nome da Subseção Judiciária - TRF1:
+                            <br>
+                            <select name="subsecao" id="selectSubsecao" required class="form-select"
+                                aria-label="Default select example">
+                                <option selected>Menu de Subseção</option>
+                                <option value="Subseção Judiciária de Juiz de Fora - 1ª Vara Juizado Especial Federal">
+                                    Subseção Judiciária de Juiz de Fora - 1ª Vara Juizado Especial Federal </option>
+                                <option value="Subseção Judiciária de Juiz de Fora - 2ª Vara Federal">Subseção
+                                    Judiciária de Juiz de Fora - 2ª Vara Federal</option>
+                                <option value="Subseção Judiciária de Juiz de Fora - 3ª Vara Federal">Subseção
+                                    Judiciária de Juiz de Fora - 3ª Vara Federal</option>
+                                <option value="Subseção Judiciária de Juiz de Fora - 4ª Vara Federal">Subseção
+                                    Judiciária de Juiz de Fora - 4ª Vara Federal</option>
+                                <option value="Vara Única de Juiz de Fora - 5ª Vara Juizado Especial Federal">Vara Única
+                                    de Juiz de Fora - 5ª Vara Juizado Especial Federal</option>
+                                <option value="Subseção Judiciária de Muriaé - Vara Única">Subseção Judiciária de Muriaé
+                                    - Vara Única</option>
+                                <option value="Subseção Judiciária de Manhuaçu">Subseção Judiciária de Manhuaçu</option>
+                            </select>
+                        </label>
+                        <div class="row">
+                            <div class="col">
+                                <label for="registro4" class="bloco1">Data do recebimento do Mandado:<input type="date"
+                                        name="data" id="registro4" required class="form-control"></label>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="registro7" class="bloco1">Prazo de resposta:<input type="number"
+                                        name="prazo" id="registro7" required class="form-control"></label>
+                            </div>
+                            <div class="col">
+                                <label for="registro2" class="bloco1">Servidor Responsável:
+                                    <br>
+                                    <select class="form-select" aria-label="Default select example" name="servidor"
+                                        id="selectServidor" required>
+                                        <option selected>Menu de Servidores</option>
+                                        <option value="Amanda / GEX">Amanda / GEX</option>
+                                        <option value="Fabrícia / ELAB-RD">Fabrícia / ELAB-RD</option>
+                                        <option value="Júlio / ELAB-MAN">Júlio / ELAB-MAN</option>
+                                        <option value="Marciel / ELAB-BI">Marciel / ELAB-BI</option>
+                                        <option value="Miriam / BENEF">Miriam / BENEF</option>
+                                        <option value="Roberto Rocha / BENEF">Roberto Rocha / BENEF</option>
+                                        <option value="Wilhamir / GEX">Wilhamir / GEX</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                        <label for="registro8" class="bloco1">Assunto do MS:
+                            <br>
+                            <select name="assunto" id="selectAssunto" required class="form-select"
+                                aria-label="Default select example">
+                                <option selected>Menu de Assuntos</option>
+                                <option value="Aposentadoria Especial">Aposentadoria Especial</option>
+                                <option value="Aposentadoria por idade">Aposentadoria por idade</option>
+                                <option value="Aposentadoria por tempo de contribuição">Aposentadoria por tempo de
+                                    contribuição</option>
+                                <option value="Aposentadoria Rural ou Hibrída">Aposentadoria Rural ou Hibrída</option>
+                                <option value="Apresentar Declaração de Cárcere">Apresentar Declaração de Cárcere
+                                </option>
+                                <option value="Atualização de Vínculos e Remuneração">Atualização de Vínculos e
+                                    Remuneração</option>
+                                <option value="Auxilio Doença">Auxilio Doença</option>
+                                <option value="Auxilio-Acidente">Auxilio-Acidente</option>
+                                <option value="Auxilio-Reclusão">Auxilio-Reclusão</option>
+                                <option value="Benefício Assistencia à Pessoa com Deficiente">Benefício Assistencia à
+                                    Pessoa com Deficiente</option>
+                                <option value="Benefício Assistencial ao Idoso">Benefício Assistencial ao Idoso</option>
+                                <option value="Cadastrar ou Renovar Representante Legal">Cadastrar ou Renovar
+                                    Representante Legal</option>
+                                <option value="CTC - Certidão de Tempo de Contribuição">CTC - Certidão de Tempo de
+                                    Contribuição</option>
+                                <option value="Marcar/Remarcar Perícia Médica">Marcar/Remarcar Perícia Médica</option>
+                                <option value="MOB">MOB</option>
+                                <option value="Pagamento não Recebido">Pagamento não Recebido</option>
+                                <option value="Pensão por morte">Pensão por morte</option>
+                                <option value="Reativar benefício">Reativar benefício</option>
+                                <option value="Recurso">Recurso</option>
+                                <option value="Revisão">Revisão</option>
+                                <option value="Salário-maternindade">Salário-maternindade</option>
+                                <option value="Solicitação de acréscimo de 25%">Solicitação de acréscimo de 25%</option>
+                                <option value="Solicitação de Insenção de IR">Solicitação de Insenção de IR</option>
+                                <option value="Solicitar Cálculo de Implementação">Solicitar Cálculo de Implementação
+                                </option>
+                                <option value="Solicitar Desistência de Benefício">Solicitar Desistência de Benefício
+                                </option>
+                                <option value="Validação Facultativa de Baixa Renda">Validação Facultativa de Baixa
+                                    Renda</option>
+
+                            </select>
+                        </label>
+                        <label for="registro11" class="bloco1">Número do CPF do segurado: <span
+                                id="cpfIncorrect"></span><input type="text" name="cpf" id="registro11" required
+                                maxlength="14" minlength="11" class="form-control"></label><br>
+                        <label for="registro12" class="bloco1">Número da tarefa GET:<input type="text" name="tarefa"
+                                id="registro12" required class="form-control"></label>
+
+                        <div class="container-sm p-4">
+                            <fieldset class="row mb-1 d-flex">
+                                <legend class="col-form-label pt-1">Meio de Recebimento?</legend>
+                                <div class="form-check form-switch">
+                                    <input type="radio" name="recebimento" id="recebimentoEmail" value="Email" required
+                                        class="form-check-input">
+                                    <label for="sim" class="form-check-label">Email</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input type="radio" name="recebimento" id="recebimentoFisico" value="Fisico"
+                                        required class="form-check-input">
+                                    <label for="não" class="form-check-label">Fisico</label>
+                                </div>
+                                <legend class="col-form-label pt-3">Possui multa?</legend>
+                                <div class="form-check form-switch">
+                                    <input type="radio" name="multa" id="registro14" value="sim" required
+                                        class="form-check-input">
+                                    <label for="sim" class="form-check-label">Sim</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input type="radio" name="multa" id="registro15" value="nao" required
+                                        class="form-check-input">
+                                    <label for="não" class="form-check-label">Não</label>
+                                </div>
+                                <legend class="col-form-label pt-3">Possui Reiteração?</legend>
+                                <div class="form-check form-switch">
+                                    <input type="radio" name="trata" id="registro16" value="sim" required
+                                        class="form-check-input">
+                                    <label for="sim" class="form-check-label">Sim</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input type="radio" name="trata" id="registro17" value="nao" required
+                                        class="form-check-input">
+                                    <label for="não" class="form-check-label">Não</label>
+                                </div>
+                                <legend class="col-form-label pt-3">Está no PatJud?</legend>
+                                <div class="form-check form-switch">
+                                    <input type="radio" name="patJud" id="registro18" value="sim" required
+                                        class="form-check-input">
+                                    <label for="sim" class="form-check-label">Sim</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input type="radio" name="patJud" id="registro19" value="nao" required
+                                        class="form-check-input">
+                                    <label for="não" class="form-check-label">Não</label>
+                                </div>
+                            </fieldset>
+                            <div class="item item2">
+                                <button type="submit" class="buttons" id="buttonSubmit">Cadastrar Mandado</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </div>
+    </form>
+    <ul id="listaMandado">
+    </ul>
+    </div>
+
+     <!--momentJS-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js" integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--FireBase-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <!--BootStrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!--Main-->
+    <script src="./cadastro.js" type="module"></script>
+</body>
+
+</html>

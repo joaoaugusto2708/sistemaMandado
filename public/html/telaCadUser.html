@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registre-se</title>
+    <link rel="stylesheet" href="/public/css/telaCadUser.css" />
+  </head>
+  <body>
+    <div class="titulo">
+      <h1>Registre-se</h1>
+    </div>
+    <section>
+      <form id="form">
+        <label for="name">Nome:</label>
+        <input type="text" name="name" id="name" minlength="1" required />
+        <span id="name-error"></span>
+        <label for="matricula">Siape:</label>
+        <input
+          type="text"
+          name="matricula"
+          id="matricula"
+          maxlength="10"
+          minlength="6"
+          required
+        />
+        <span id="matricula-error"></span>
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" required />
+        <span id="email-error"></span>
+        <label for="password">Senha:</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          maxlength="16"
+          minlength="8"
+          required
+        />
+        <span id="password-error"></span>
+        <button type="submit" id="registrar">Registrar</button>
+      </form>
+    </section>
+    <!--firebase-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/3.5.1/firebase-ui-auth__pt.js"></script>
+    <script src="/public/js/telaCadUser.js" type="module"></script>
+  </body>
+</html>
